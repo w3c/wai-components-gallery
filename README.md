@@ -1,2 +1,1 @@
-# wai-components-gallery
-This is the git repository for the “Gallery of Accessibile Web Components”, developed by @yatil in the WAI-DEV project
+# Currently this repository is just used for the [wiki](https://github.com/w3c/wai-components-gallery/wiki/).
