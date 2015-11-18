@@ -87,7 +87,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
       	'slug' => "vendors",
@@ -105,7 +105,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
       	'slug' => "vendors",
@@ -123,7 +123,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
       	'slug' => "vendors",
@@ -141,7 +141,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
       	'slug' => "vendors",
