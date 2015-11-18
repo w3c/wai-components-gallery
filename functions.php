@@ -76,6 +76,65 @@ function wai_components_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+  // Add Post types for the Components Gallery
+  register_post_type( 'wai_vendors',
+    array(
+      'labels' => array(
+        'name' => __( 'Vendors' ),
+        'singular_name' => __( 'Vendor' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array(
+      	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      )
+    )
+  );
+
+  register_post_type( 'wai_templates',
+    array(
+      'labels' => array(
+        'name' => __( 'Templates' ),
+        'singular_name' => __( 'Template' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array(
+      	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      )
+    )
+  );
+
+  register_post_type( 'wai_widgets',
+    array(
+      'labels' => array(
+        'name' => __( 'Widgets' ),
+        'singular_name' => __( 'Widget' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array(
+      	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      )
+    )
+  );
+
+  register_post_type( 'wai_frameworks',
+    array(
+      'labels' => array(
+        'name' => __( 'Frameworks' ),
+        'singular_name' => __( 'Framework' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array(
+      	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      )
+    )
+  );
+
+
 }
 endif; // wai_components_setup
 add_action( 'after_setup_theme', 'wai_components_setup' );
