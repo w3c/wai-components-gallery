@@ -88,6 +88,10 @@ function wai_components_setup() {
       'has_archive' => true,
       'supports' => array(
       	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      ),
+      'rewrite' => array (
+      	'slug' => "vendors",
+      	'with_front' => "false"
       )
     )
   );
@@ -102,6 +106,10 @@ function wai_components_setup() {
       'has_archive' => true,
       'supports' => array(
       	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      ),
+      'rewrite' => array (
+      	'slug' => "vendors",
+      	'with_front' => "false"
       )
     )
   );
@@ -116,6 +124,10 @@ function wai_components_setup() {
       'has_archive' => true,
       'supports' => array(
       	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      ),
+      'rewrite' => array (
+      	'slug' => "vendors",
+      	'with_front' => "false"
       )
     )
   );
@@ -130,6 +142,10 @@ function wai_components_setup() {
       'has_archive' => true,
       'supports' => array(
       	'title', 'editor', 'thumbnail', 'comments', 'revisions'
+      ),
+      'rewrite' => array (
+      	'slug' => "vendors",
+      	'with_front' => "false"
       )
     )
   );
