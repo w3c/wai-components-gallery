@@ -92,7 +92,9 @@ function wai_components_setup() {
       'rewrite' => array (
       	'slug' => "vendor",
       	'with_front' => "false"
-      )
+      ),
+      'capability_type'     => array('psp_project','psp_projects'),
+      'map_meta_cap'        => true,
     )
   );
 
@@ -110,7 +112,9 @@ function wai_components_setup() {
       'rewrite' => array (
       	'slug' => "template",
       	'with_front' => "false"
-      )
+      ),
+      'capability_type'     => array('psp_project','psp_projects'),
+      'map_meta_cap'        => true,
     )
   );
 
@@ -128,7 +132,9 @@ function wai_components_setup() {
       'rewrite' => array (
       	'slug' => "widget",
       	'with_front' => "false"
-      )
+      ),
+      'capability_type'     => array('psp_project','psp_projects'),
+      'map_meta_cap'        => true,
     )
   );
 
@@ -146,7 +152,9 @@ function wai_components_setup() {
       'rewrite' => array (
       	'slug' => "framework",
       	'with_front' => "false"
-      )
+      ),
+      'capability_type'     => array('psp_project','psp_projects'),
+      'map_meta_cap'        => true,
     )
   );
 
