@@ -77,6 +77,45 @@ function wai_components_setup() {
 		'default-image' => '',
 	) ) );
 
+	function wai_add_contributer_role() {
+ add_role('wai_custom_post_manager',
+            'WAI Contributor',
+            array(
+                'read' => true,
+                'edit_posts' => false,
+                'delete_posts' => false,
+                'publish_posts' => false,
+                'upload_files' => true,
+            )
+        );
+   }
+   register_activation_hook( __FILE__, 'wai_add_contributer_role' );
+
+    add_action('admin_init','wai_add_role_caps',999);
+    function wai_add_role_caps() {
+
+		// Add the roles you'd like to administer the custom post types
+		$roles = array('wai_custom_post_manager','editor','administrator');
+
+		// Loop through each role and assign capabilities
+		foreach($roles as $the_role) {
+
+		     $role = get_role($the_role);
+
+         $role->add_cap( 'read' );
+         $role->add_cap( 'read_wai_custom_post');
+         $role->add_cap( 'read_private_wai_custom_posts' );
+         $role->add_cap( 'edit_wai_custom_post' );
+         $role->add_cap( 'edit_wai_custom_posts' );
+         $role->add_cap( 'edit_others_wai_custom_posts' );
+         $role->add_cap( 'edit_published_wai_custom_posts' );
+         $role->add_cap( 'publish_wai_custom_posts' );
+         $role->add_cap( 'delete_others_wai_custom_posts' );
+         $role->add_cap( 'delete_private_wai_custom_posts' );
+         $role->add_cap( 'delete_published_wai_custom_posts' );
+
+		}
+
   // Add Post types for the Components Gallery
   register_post_type( 'wai_vendors',
     array(
@@ -93,7 +132,7 @@ function wai_components_setup() {
       	'slug' => "vendor",
       	'with_front' => "false"
       ),
-      'capability_type'     => array('psp_project','psp_projects'),
+      'capability_type'     => array('wai_custom_post','wai_custom_posts'),
       'map_meta_cap'        => true,
     )
   );
@@ -113,7 +152,7 @@ function wai_components_setup() {
       	'slug' => "template",
       	'with_front' => "false"
       ),
-      'capability_type'     => array('psp_project','psp_projects'),
+      'capability_type'     => array('wai_custom_post','wai_custom_posts'),
       'map_meta_cap'        => true,
     )
   );
@@ -133,7 +172,7 @@ function wai_components_setup() {
       	'slug' => "widget",
       	'with_front' => "false"
       ),
-      'capability_type'     => array('psp_project','psp_projects'),
+      'capability_type'     => array('wai_custom_post','wai_custom_posts'),
       'map_meta_cap'        => true,
     )
   );
@@ -153,7 +192,7 @@ function wai_components_setup() {
       	'slug' => "framework",
       	'with_front' => "false"
       ),
-      'capability_type'     => array('psp_project','psp_projects'),
+      'capability_type'     => array('wai_custom_post','wai_custom_posts'),
       'map_meta_cap'        => true,
     )
   );
