@@ -90,7 +90,7 @@ function wai_components_setup() {
       	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "vendors",
+      	'slug' => "vendor",
       	'with_front' => "false"
       )
     )
@@ -108,7 +108,7 @@ function wai_components_setup() {
       	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "vendors",
+      	'slug' => "template",
       	'with_front' => "false"
       )
     )
@@ -126,7 +126,7 @@ function wai_components_setup() {
       	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "vendors",
+      	'slug' => "widget",
       	'with_front' => "false"
       )
     )
@@ -144,7 +144,7 @@ function wai_components_setup() {
       	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "vendors",
+      	'slug' => "framework",
       	'with_front' => "false"
       )
     )
