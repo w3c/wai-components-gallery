@@ -78,7 +78,7 @@ function wai_components_setup() {
 	) ) );
 
 	function wai_add_contributer_role() {
- add_role('wai_custom_post_manager',
+ 		add_role('wai_custom_post_manager',
             'WAI Contributor',
             array(
                 'read' => true,
@@ -115,6 +115,7 @@ function wai_components_setup() {
          $role->add_cap( 'delete_published_wai_custom_posts' );
 
 		}
+	}
 
   // Add Post types for the Components Gallery
   register_post_type( 'wai_vendors',
