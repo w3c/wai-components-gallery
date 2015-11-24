@@ -25,14 +25,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wai_components' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+    <div class="not-w3c-notification">This is an Editor’s draft, for <em>preview purposes only</em>.</div>
+    <div class="w3c-wai-header">
+      <a href="http://w3.org/"><img alt="W3C" src="<?php bloginfo('template_url'); ?>/img/w3c.png" width="90"></a>
+      <a href="http://w3.org/WAI/" class="wai"><img alt="Web Accessibility Initiative" src="<?php bloginfo('template_url'); ?>/img/wai.png"></a>
+    </div>
+    <div class="page-title">
+    	<?php if ( is_front_page() && is_home() ) : ?>
+      	<span class="current-a">
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif; ?>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- .site-branding -->
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    	<?php endif; ?>
+      <?php bloginfo( 'name' ); ?> <span class="subheading"><?php bloginfo( 'description' ); ?></span>
+      <?php if ( is_front_page() && is_home() ) : ?>
+      	</span>
+			<?php else : ?>
+				</a>
+    	<?php endif; ?>
+    </div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wai_components' ); ?></button>
