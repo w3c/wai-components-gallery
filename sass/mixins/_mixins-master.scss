@@ -21,3 +21,25 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin container() {
+  margin: 0 10px;
+}
+
+// Generic media query mixin
+@mixin mq($width, $IE9: false, $query1: min, $query2: width) {
+  @if $IE9 == true{
+    .lt-ie9 & {
+      @content;
+    }
+    @media screen and (#{$query1}-#{$query2}: $width) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (#{$query1}-#{$query2}: $width) {
+      @content;
+    }
+  }
+}

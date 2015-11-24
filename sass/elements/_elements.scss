@@ -10,6 +10,8 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	max-width: 1680px;
+	margin: 0 auto;
 }
 
 blockquote, q {
@@ -27,6 +29,8 @@ hr {
 	height: 1px;
 	margin-bottom: 1.5em;
 }
+
+@import "header";
 
 @import "lists";
 
