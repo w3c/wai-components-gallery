@@ -1,0 +1,1699 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"border-l",
+				"border-left"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"scrollTo",
+				"scrollto"
+			],
+			[
+				"attr",
+				"attr	.attr() - single"
+			],
+			[
+				"inner",
+				"innerHeight	.innerHeight()"
+			],
+			[
+				"log",
+				"log"
+			],
+			[
+				"unchecke",
+				"uncheckedTechnologies"
+			],
+			[
+				"each",
+				"each	.each()"
+			],
+			[
+				"unchecked",
+				"uncheckedLevels"
+			],
+			[
+				"remove",
+				"removeClass	.removeClass()"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"hidesi",
+				"hidesidebar"
+			],
+			[
+				"techte",
+				"techtexthidden"
+			],
+			[
+				"sc",
+				"sctexthidden2"
+			],
+			[
+				"sctext",
+				"sctexthidden1"
+			],
+			[
+				"stat",
+				"statustext"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"main",
+				"mainrow"
+			],
+			[
+				"query",
+				"querySelectorAll"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"border-lef",
+				"border-left-color"
+			],
+			[
+				"style",
+				"style	Attr"
+			],
+			[
+				"exc",
+				"excolsc"
+			],
+			[
+				"off",
+				"offset	.offset()"
+			],
+			[
+				"apply",
+				"applyFilters"
+			],
+			[
+				"appl",
+				"applyFilters"
+			],
+			[
+				"outer",
+				"outerHeight	.outerHeight()"
+			],
+			[
+				"appen",
+				"append	.append()"
+			],
+			[
+				"prop",
+				"prop	.prop() - single"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"tw",
+				"twitter-tabbar-notifications.png	w:640 h:88"
+			],
+			[
+				"im",
+				"IMDB-NavBar.png	w:640 h:88"
+			],
+			[
+				"f",
+				"foursquare-menu.gif	w:320 h:568"
+			],
+			[
+				"p",
+				"pictures/"
+			],
+			[
+				"append",
+				"appendTo	.appendTo()"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"iframe",
+				"iframe	Tag"
+			],
+			[
+				"class",
+				"class"
+			],
+			[
+				"css",
+				"css	.css() - single"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"parent",
+				"parentsUntil	.parentsUntil()"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"pt",
+				"padding-top"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 8069,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "template-parts/content-single.php",
+			"settings":
+			{
+				"buffer_size": 1575,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 1362,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/style.scss",
+			"settings":
+			{
+				"buffer_size": 3397,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/variables-site/_colors.scss",
+			"settings":
+			{
+				"buffer_size": 580,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/variables-site/_typography.scss",
+			"settings":
+			{
+				"buffer_size": 272,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/elements/_elements.scss",
+			"settings":
+			{
+				"buffer_size": 766,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 2143,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "convert",
+		"selected_items":
+		[
+			[
+				"convert",
+				"Marksy Convert: Convert to HTML"
+			],
+			[
+				"conver",
+				"Marksy Convert: Convert to HTML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"mediawike",
+				"Mediawiker: Select wiki"
+			],
+			[
+				"norm",
+				"Origami: New Window from Saved Layout"
+			],
+			[
+				"entity-left",
+				"Snippet: entity-left-angle"
+			],
+			[
+				"JSON",
+				"Set Syntax: JSON"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"encode",
+				"StringEncode: HTML Entitize"
+			],
+			[
+				"hint",
+				"JSHint"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"cpgrade",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"pack",
+				"Package Control: Add Repository"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 583.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/yatil/projects/wai-components-gallery",
+		"/Users/yatil/projects/wai-components-gallery/img",
+		"/Users/yatil/projects/wai-components-gallery/sass/elements",
+		"/Users/yatil/projects/wai-components-gallery/sass/forms",
+		"/Users/yatil/projects/wai-components-gallery/sass/layout",
+		"/Users/yatil/projects/wai-components-gallery/sass/media",
+		"/Users/yatil/projects/wai-components-gallery/sass/mixins",
+		"/Users/yatil/projects/wai-components-gallery/sass/modules",
+		"/Users/yatil/projects/wai-components-gallery/sass/navigation",
+		"/Users/yatil/projects/wai-components-gallery/sass/site",
+		"/Users/yatil/projects/wai-components-gallery/sass/site/primary",
+		"/Users/yatil/projects/wai-components-gallery/sass/typography",
+		"/Users/yatil/projects/wai-components-gallery/sass/variables-site",
+		"/Users/yatil/projects/wai-components-gallery/template-parts"
+	],
+	"file_history":
+	[
+		"/Users/yatil/projects/wai-components-gallery/package.json",
+		"/Users/yatil/Downloads/9-contribute.html",
+		"/Users/yatil/Downloads/icomoon_21_icons/SVG/quote-left.svg",
+		"/Users/yatil/.zshrc",
+		"/Users/yatil/projects/wai-quickref/_help/2-howto.md",
+		"/Users/yatil/projects/wai-quickref/_data/about.yml",
+		"/Users/yatil/projects/wai-quickref/_help",
+		"/Users/yatil/.aliases",
+		"/Users/yatil/projects/wai-quickref/_data/techniques.yml",
+		"/Users/yatil/projects/wai-quickref/js/jquery.min.js",
+		"/Users/yatil/projects/w3.org/WWW/2015/10/20-weum-minutes.html",
+		"/Users/yatil/projects/wai-quickref/_data/tags-sc.yml",
+		"/Users/yatil/projects/w3.org/WWW/WAI/Plan/conferences.html",
+		"/Users/yatil/projects/w3.org/WWW/WAI/IG/charter5.html",
+		"/Users/yatil/projects/w3.org/WWW/2015/10/14-wai-minutes.html",
+		"/Users/yatil/projects/w3c-staff-review/review-eggert-2014-10-13.html",
+		"/Users/yatil/projects/w3.org/WWW/WAI/EO/2015/deliverables/quickref.inc.php",
+		"/Users/yatil/projects/wai-quickref/_scss/_bootstrap.scss",
+		"/Users/yatil/projects/wai-quickref/_scss/bootstrap/_variables.scss",
+		"/Users/yatil/projects/wai-quickref/gulpfile.js",
+		"/Users/yatil/projects/wai-quickref/css/styles.css",
+		"/Users/yatil/projects/wai-quickref/_js/script.js",
+		"/Users/yatil/projects/wai-quickref/_scss/styles.scss",
+		"/Users/yatil/projects/w3.org/WWW/2015/09/04-eo-minutes.html",
+		"/Users/yatil/projects/w3.org/WWW/WAI/ER/tools/WWW/WAI/.htaccess",
+		"/Users/yatil/projects/wai-quickref/js/sharebox.js",
+		"/Users/yatil/projects/wai-quickref/js/script.js",
+		"/Users/yatil/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/yatil/projects/w3.org/WWW/WAI/EO/Drafts/eval/checks.html",
+		"/Users/yatil/projects/w3.org/WWW/WAI/Plan/minutes.html",
+		"/Users/yatil/projects/wai-quickref/_includes/filters.html",
+		"/Users/yatil/projects/wai-quickref/index.html",
+		"/Users/yatil/projects/wai-quickref/_includes/header.html",
+		"/Users/yatil/projects/wai-quickref/_layouts/default.html",
+		"/Users/yatil/projects/wai-quickref/_includes/guideline.html",
+		"/Users/yatil/projects/wai-quickref/_includes/sc.html",
+		"/Users/yatil/projects/wai-quickref/_includes/techlist.html",
+		"/Users/yatil/projects/wai-quickref/_includes/sidenav.html",
+		"/Users/yatil/projects/wai-quickref/_config.yml",
+		"/Users/yatil/projects/wai-quickref/_includes/tags.html",
+		"/Users/yatil/projects/wai-quickref/_data/wcag2.json",
+		"/Users/yatil/projects/wai-quickref/_includes/techniquelink.html",
+		"/Users/yatil/projects/wai-quickref/_includes/techniqueclass.html",
+		"/Users/yatil/projects/wai-quickref/_includes/level.html",
+		"/Users/yatil/projects/wai-quickref/_filters/tags.md",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/72EBC2E4-604A-45F8-9BD4-8D73F532F3D8/config.neon",
+		"/Users/yatil/Downloads/wcag2.json",
+		"/Users/yatil/projects/wai-tutorials/source/menus/structure.html.erb.md",
+		"/Users/yatil/projects/atag.yatil.net/_2008/todsuenden.html",
+		"/Users/yatil/projects/atag.yatil.net/_2008/cms2.html",
+		"/Users/yatil/projects/atag.yatil.net/_2008/gettogether.html",
+		"/Users/yatil/projects/atag.yatil.net/_2008/kaffeepause2.html",
+		"/Users/yatil/Downloads/programm.yml",
+		"/Users/yatil/projects/atag.yatil.net/_2008/kaffeepause.html",
+		"/Users/yatil/projects/atag.yatil.net/_2008/voralberg.html",
+		"/Users/yatil/projects/atag.yatil.net/_2008/keynote.md",
+		"/Users/yatil/Library/Application Support/MailMate/Attachments/wcag2.json",
+		"/Users/yatil/Downloads/showbiz/inc_php/framework/functions.class.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/7D911A49-2B15-493D-A21A-FCEFBF4FBD69/showbiz.php",
+		"/Users/yatil/Downloads/portfolio-press/sidebar-contact.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/37889D64-DF5E-450B-AC35-DC251C6E3E95/wp-config.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/1C9497BA-8673-40FB-AA7C-335A56AB65F7/tag.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/0E0E8661-E0A4-45B3-AFE4-A46B4F62322D/single.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/7AFA92A4-819F-47FF-BD76-04430B5BC618/single-portfolio.php",
+		"/Users/yatil/.bash_profile",
+		"/Users/yatil/projects/w3.org/WWW/2015/07/22-wai-minutes.html",
+		"/Users/yatil/projects/wai-tutorials/source/menus/flyout.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/menus/application.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/carousels/functionality.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/menus/styling.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/carousels/animations.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/page-structure/labels.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/page-structure/regions.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/carousels/structure.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/carousels/index.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/carousels/full-code.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/stylesheets/wai-act.scss",
+		"/Users/yatil/projects/wai-tutorials/config.rb",
+		"/Users/yatil/projects/wai-tutorials/source/page-structure/multiple-ways.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/page-structure/in-page-navigation.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/page-structure/styling.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/page-structure/content.html.erb.md",
+		"/Users/yatil/projects/wai-tutorials/source/page-structure/headings.html.erb.md",
+		"/Users/yatil/projects/wai-quickref/_filters/techniques.md",
+		"/Users/yatil/projects/wai-quickref/3.html",
+		"/Users/yatil/projects/wai-quickref/2.html",
+		"/Users/yatil/.bash_history",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/7274F191-3BA1-446A-B3E9-D6C94BB98E77/simple-custom-post-type-archives.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/23994EAC-3D4C-4BD0-BBC2-E9E82C3BE2FA/portfolio-post-type.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/E40C7C68-82DB-4BBB-A325-C2525558EF85/404.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/A272A068-053C-4747-A196-CA1362F44452/archive-portfolio.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/89871E6C-6420-4D7C-9F26-D95E8C695A72/archive.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/70A9E93C-E18D-4CBC-9D41-6057A4A94EE1/author.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/A8011B66-EEAF-4493-9088-FB68F8FE9DC2/category.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/5E0A7ECE-D17E-4992-ADC7-7FC768009B05/comments.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/9A81F552-7568-4FE4-91E7-258A95E765B1/footer.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/945A91F0-4C7E-4A35-9E6F-60B6E94E6560/loop.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/636C5EB7-C0EE-494A-9334-B73FFA1FC3AD/taxonomy-portfolio-tags.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/403D37DE-98F7-4092-BB38-F7EEABD3A2AA/tag.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/051A2407-4E84-424F-84D5-1B2156FE64CF/style.css",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/E821ECCA-069D-4D9E-809C-CA0A426747FF/single.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/D8E91041-D84F-4717-9C27-89C14E0066E0/single-portfolio.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/5AE8335D-25BB-4960-A118-B11727FBE71F/sidebar.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/C8AA2EF7-2B5D-4914-8877-FF0534E05A6D/sidebar-contact.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/1F676E2A-553E-4300-BE2C-425EEDD91774/loop.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/D7352208-F427-49C8-8290-E5AF569B10FD/image.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/DC9AE8EE-67C4-4E29-B99E-796C9678B282/full-width-portfolio.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/D235AC4D-5248-4A64-8EEA-D60F0FC2204D/functions.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/75008515-59AB-4044-BD79-3311C9EBEBB0/footer.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/A3BAB178-C49B-4B65-A548-CF607252777A/footer.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/A4C8CD14-E401-4EB6-9FF7-AFA5C32C3FB5/full-width-page.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/325E333D-0CF4-439E-8B22-47850C637DE1/index.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/07568D03-588C-4653-9915-AA9251C8A54E/.htaccess",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/4A1E68B4-93D1-40D3-8099-111535DF163C/.htaccess",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/6A154383-FB20-4188-BCD4-1B5E943ADCB5/cfaob33jvt.php",
+		"/Users/yatil/Library/Caches/Cleanup At Startup/Transmit/9ABA1FEF-F77B-4C82-BF28-F2F7364E4B6E/.htaccess",
+		"/Users/yatil/projects/wai-quickref/_scss/bootstrap/_glyphicons.scss",
+		"/Users/yatil/projects/wai-quickref/_includes/filters2.html",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.4.6-visual-audio-contrast7.md",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.4.5-visual-audio-contrast-text-presentation.md",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.4.4-visual-audio-contrast-scale.md",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.4.3-visual-audio-contrast-contrast.md",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.3.2-content-structure-separation-sequence.md",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.3.1-content-structure-separation-programmatic.md",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.2.9-media-equiv-live-audio-only.md",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.2.8-media-equiv-text-doc.md",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.2.7-media-equiv-extended-ad.md",
+		"/Users/yatil/projects/wai-quickref/_successcriteria/1.2.6-media-equiv-sign.md"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"/Users/yatil/projects/wai-quickref",
+			"/Users/yatil/projects/wai-quickref/_includes",
+			"",
+			"/Users/yatil/projects/wai-quickref/_successcriteria",
+			"",
+			"/Users/yatil/projects/wai-quickref/_scss/bootstrap",
+			"",
+			"/Users/yatil/Dropbox/projects/wai-quickref/_sass/bootstrap/mixins"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"psp",
+			"psp_project",
+			"'editor', ",
+			"_type",
+			"'supports' => array(",
+			"type( 'wai_",
+			"wai_",
+			"'has_archive' => true,",
+			" +",
+			"\n",
+			"Pro",
+			"update",
+			"banner",
+			"eader[role=\"banner\"",
+			"container-fluid",
+			".active",
+			"title",
+			"future",
+			"$(e.target)",
+			"scrollto",
+			".sidebar",
+			"mq",
+			"scrollTop",
+			"height",
+			"</p>",
+			"<p>",
+			"applyurl",
+			"[Github issues]",
+			" *",
+			".title",
+			"\"title\":",
+			".title",
+			"title",
+			".title",
+			"\"title\":",
+			"scrollto",
+			"^                                ",
+			"                                    ",
+			"                                   ",
+			"                                  ",
+			"                                 ",
+			"                                ",
+			"\n},",
+			"                                ",
+			"TEXT",
+			"^(.*) \\(future link\\)$",
+			"^(.*)$",
+			" (future link)",
+			"console",
+			"scroll",
+			"scrollto",
+			"top",
+			"main",
+			"\"handle\": \"(.*):\",",
+			"Principle [0-9]: (.*) - ",
+			"Principle [0-9]: Perceivable - ",
+			"#clearall",
+			"@incl",
+			"scrollto",
+			"scrolltp",
+			"hiddensc",
+			"console.",
+			"updateuri",
+			"scrollto",
+			"showtechniq",
+			"fragment",
+			"techniques-\"",
+			"apply",
+			"console.log(urltags);",
+			"replace",
+			"techniques-bu",
+			"techniques-button",
+			"push",
+			"pop",
+			"uri.",
+			".search",
+			"uri.search",
+			"url",
+			"techniques",
+			"console.log",
+			"#\"",
+			"applyTagsAndLevelsToSC",
+			"navbar-scroll",
+			"#FFF9C4",
+			"console.lo",
+			"scrollto",
+			"scroll",
+			"sticky",
+			"fixedsti",
+			".active .sidebar-content",
+			"main-inner",
+			"height",
+			"main",
+			"maininner",
+			"inner",
+			"statusText",
+			"principle",
+			"guidelines[i]",
+			"wapper",
+			"applyTags",
+			".current",
+			"4.1.2",
+			"4.1.1",
+			"3.3.6",
+			"3.3.5",
+			"3.3.4",
+			"3.3.3",
+			"3.3.2",
+			"3.3.1",
+			"3.2.5",
+			"3.2.4",
+			"consistency",
+			"3.2.3",
+			"3.2.2",
+			"3.2.1",
+			"3.1.6",
+			"3.1.5",
+			"3.1.4",
+			"clarification",
+			"3.1.3",
+			"3.1.2",
+			"3.1.1",
+			"2.4.10",
+			"2.4.9",
+			"2.4.8",
+			"2.4.7",
+			"2.4.6",
+			"2.4.5"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"wai_custom_post",
+			"\"text\":",
+			"",
+			"                                                        {\n                                                            \"id\": \"TECH:future1\",\n                                                            \"title\": \"$1\"\n                                                        },",
+			"                                                        {\n                                                            \"id\": \"TECH:future1\",\n                                                            \"title\": \"$1\"\n                                                        }",
+			"",
+			"\"handle\": \"$1\",",
+			"",
+			".clearall",
+			"$1",
+			"li>",
+			"* <span class=\"indent\">Narration: $1</span>",
+			"$1statusanimation();",
+			"statusanimation();",
+			"",
+			"$1applyTechnologies();\\n$1applyTagsAndLevelsToSC();",
+			"applyTechnologies();applyTagsAndLevelsToSC();",
+			"",
+			"{% endif %}><span>$1</span></label>",
+			"tbox tbox",
+			"$1",
+			"==== Prototype $1 ====",
+			"cos14",
+			"maxwidth",
+			"<p class=\"byline\">$1</p>",
+			"<section $1>",
+			"div>",
+			"    $1",
+			"support: Developed with support from the <a href=\"http://www.w3.org/WAI/ACT/\">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title=\"Information Society Technologies\">IST</abbr> Programme</strong>.",
+			"/",
+			"Editorial Changes",
+			"source%2Ftables",
+			"",
+			"$1"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2333,
+								2333
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"mediawiker_wiki_instead_editor": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tabs_extra_last_activated": 1448293342.6,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1456.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "template-parts/content-single.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1575,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								713,
+								713
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"mediawiker_wiki_instead_editor": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								495,
+								495
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"mediawiker_wiki_instead_editor": false,
+							"syntax": "Packages/Seti_UI/Langs/Gulpfile JS.tmLanguage",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1448370866.53,
+							"tabs_extra_last_activated_sheet_index": 2,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 133.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3397,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								106,
+								106
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"mediawiker_wiki_instead_editor": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tabs_extra_last_activated": 1448379166.5,
+							"tabs_extra_last_activated_sheet_index": 3,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1585.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sass/variables-site/_colors.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 580,
+						"regions":
+						{
+							"gutter_color_0":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f5f5f5.png",
+								"regions":
+								[
+									[
+										0,
+										33
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_132":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#eee.png",
+								"regions":
+								[
+									[
+										135,
+										164
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_135":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#eee.png",
+								"regions":
+								[
+									[
+										135,
+										164
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_162":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff9c0.png",
+								"regions":
+								[
+									[
+										165,
+										197
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_165":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff9c0.png",
+								"regions":
+								[
+									[
+										165,
+										197
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_196":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#21759b.png",
+								"regions":
+								[
+									[
+										199,
+										228
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_199":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#21759b.png",
+								"regions":
+								[
+									[
+										199,
+										228
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_226":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666.png",
+								"regions":
+								[
+									[
+										229,
+										254
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_229":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666.png",
+								"regions":
+								[
+									[
+										229,
+										254
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_252":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#111.png",
+								"regions":
+								[
+									[
+										255,
+										286
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_255":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#111.png",
+								"regions":
+								[
+									[
+										255,
+										286
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_284":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/royalblue.png",
+								"regions":
+								[
+									[
+										287,
+										306
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_287":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#036.png",
+								"regions":
+								[
+									[
+										287,
+										306
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_307":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/purple.png",
+								"regions":
+								[
+									[
+										307,
+										343
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_309":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/purple.png",
+								"regions":
+								[
+									[
+										307,
+										343
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_31":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f1f1f1.png",
+								"regions":
+								[
+									[
+										34,
+										69
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_339":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/midnightblue.png",
+								"regions":
+								[
+									[
+										344,
+										369
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_34":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f1f1f1.png",
+								"regions":
+								[
+									[
+										34,
+										69
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_344":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#036.png",
+								"regions":
+								[
+									[
+										344,
+										369
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_370":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#333.png",
+								"regions":
+								[
+									[
+										370,
+										394
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_373":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#404040.png",
+								"regions":
+								[
+									[
+										370,
+										394
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_396":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										396,
+										434
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_402":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										396,
+										434
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_435":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										435,
+										479
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_441":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										435,
+										479
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_480":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#aaa.png",
+								"regions":
+								[
+									[
+										480,
+										524
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_486":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#aaa.png",
+								"regions":
+								[
+									[
+										480,
+										524
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_525":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										525,
+										552
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_531":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										525,
+										552
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_553":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666.png",
+								"regions":
+								[
+									[
+										553,
+										579
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_559":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666.png",
+								"regions":
+								[
+									[
+										553,
+										579
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_67":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										70,
+										98
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_70":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ccc.png",
+								"regions":
+								[
+									[
+										70,
+										98
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_96":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#e6e6e6.png",
+								"regions":
+								[
+									[
+										99,
+										134
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_99":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#e6e6e6.png",
+								"regions":
+								[
+									[
+										99,
+										134
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								393,
+								393
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"mediawiker_wiki_instead_editor": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tabs_extra_last_activated": 1448379164.71,
+							"tabs_extra_last_activated_sheet_index": 4,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sass/variables-site/_typography.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"mediawiker_wiki_instead_editor": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tabs_extra_last_activated": 1448379189.08,
+							"tabs_extra_last_activated_sheet_index": 6,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "sass/elements/_elements.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								397,
+								397
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+							"mediawiker_wiki_instead_editor": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tabs_extra_last_activated": 1448379261.11,
+							"tabs_extra_last_activated_sheet_index": 6,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1721,
+								1721
+							]
+						],
+						"settings":
+						{
+							"mediawiker_wiki_instead_editor": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tabs_extra_last_activated": 1448380179.22,
+							"tabs_extra_last_activated_sheet_index": 7,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 419.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "wai-components-gallery.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"jqueryis",
+				"js/jquery.min.js"
+			],
+			[
+				"sidena",
+				"_includes/sidenav.html"
+			],
+			[
+				"variab",
+				"_scss/bootstrap/_variables.scss"
+			],
+			[
+				"icons",
+				"img/icons.svg"
+			],
+			[
+				"variables",
+				"_scss/bootstrap/_variables.scss"
+			],
+			[
+				"status",
+				"_includes/filter-status.html"
+			],
+			[
+				"varia",
+				"_scss/bootstrap/_variables.scss"
+			],
+			[
+				"styles",
+				"_scss/styles.scss"
+			],
+			[
+				"style",
+				"_scss/styles.scss"
+			],
+			[
+				"sc.html",
+				"_includes/sc.html"
+			],
+			[
+				"level",
+				"_includes/level.html"
+			],
+			[
+				"techniquelin",
+				"_includes/techniquelink.html"
+			],
+			[
+				"technique",
+				"_includes/techniqueclass.html"
+			],
+			[
+				"techl",
+				"_includes/techlist.html"
+			],
+			[
+				"guide",
+				"_includes/guideline.html"
+			],
+			[
+				"fly",
+				"source/menus/flyout.html.erb.md"
+			],
+			[
+				"showbiz_slide.class.php",
+				"inc_php/showbiz_slide.class.php"
+			],
+			[
+				"struc",
+				"source/carousels/structure.html.erb.md"
+			],
+			[
+				"function",
+				"source/carousels/functionality.html.erb.md"
+			],
+			[
+				"styling",
+				"source/menus/styling.html.erb.md"
+			],
+			[
+				"default",
+				"_layouts/default.html"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"footer",
+				"_includes/footer.html"
+			],
+			[
+				"filter-stat",
+				"_includes/filter-status.html"
+			],
+			[
+				"script",
+				"js/script.js"
+			],
+			[
+				"gly",
+				"_scss/bootstrap/_glyphicons.scss"
+			],
+			[
+				"scr",
+				"js/script.js"
+			],
+			[
+				"filter",
+				"_includes/filters2.html"
+			],
+			[
+				"s",
+				"js/script.js"
+			],
+			[
+				"sty",
+				"_scss/styles.scss"
+			],
+			[
+				"header",
+				"_includes/header.html"
+			],
+			[
+				"filter-sta",
+				"_includes/filter-status.html"
+			],
+			[
+				"tags",
+				"_includes/tags.html"
+			],
+			[
+				"sc.",
+				"_includes/sc.html"
+			],
+			[
+				"sc.h",
+				"_includes/sc.html"
+			],
+			[
+				"sc",
+				"js/script.js"
+			],
+			[
+				"voll",
+				"_scss/_vollkorn.scss"
+			],
+			[
+				"9.",
+				"9.html"
+			],
+			[
+				"tags.html",
+				"_includes/tags.html"
+			],
+			[
+				"filters",
+				"_includes/filters2.html"
+			],
+			[
+				"type",
+				"_scss/bootstrap/_type.scss"
+			],
+			[
+				"norma",
+				"_scss/bootstrap/_normalize.scss"
+			],
+			[
+				"varial",
+				"_scss/bootstrap/_variables.scss"
+			],
+			[
+				"scaff",
+				"_scss/bootstrap/_scaffolding.scss"
+			],
+			[
+				"search",
+				"_includes/searchform.html"
+			],
+			[
+				"glyp",
+				"_scss/bootstrap/_glyphicons.scss"
+			],
+			[
+				"pageheadi",
+				"source/page-structure/headings.html.erb.md"
+			],
+			[
+				"navi",
+				"_includes/navigation.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
