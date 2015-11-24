@@ -18,3 +18,25 @@ header[role=banner] {
       &:hover, &:focus {text-decoration: underline;}
   }
 }
+
+.page-title {
+  font-size: 1.75em;
+  @extend .font-secondary;
+  margin-bottom: 1em;
+  line-height: 1;
+  padding: .25em 0 0;
+  float:none;
+  .subheading {
+    padding: .25em 0 0;
+    display:block;
+    font-size: .5em;
+    @extend .font-primary;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
