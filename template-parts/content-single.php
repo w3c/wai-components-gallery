@@ -19,28 +19,134 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-			$post_object = get_field('vendor');
 
-			if( $post_object ):
+		<?php if ( get_post_type( ) == 'wai_vendors' ): ?>
+			<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+				the_post_thumbnail( 'medium', array( 'class' => 'alignright' ) );
+			} ?>
+			<?php
+				// args
+				$args = array(
+					'numberposts'	=> -1,
+					'post_type'		=> array('wai_frameworks'),
+					'meta_key'		=> 'vendor',
+					'meta_value'	=> get_the_ID()
+				);
 
-				// override $post
-				$post = $post_object;
-				setup_postdata( $post );
-
+				// query
+				$the_query = new WP_Query( $args );
 				?>
-			    <div style="border: 3px solid #bbb; padding: 10px;">
-			    	<h3>Vendor: <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			    	<?php //<span>Post Object Custom Field: <?php the_field('field_name'); </span> ?>
-			    </div>
-			    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-			<?php endif; ?>
-		<?php the_field( "description" ); ?>
-		<?php the_field( "website" ); ?>
-		<?php the_field( "a11y_statement" ); ?>
-		<?php the_field( "a11y_statement_url" ); ?>
-		<?php the_field( "development_url" ); ?>
-		<?php the_content(); ?>
+				<?php if( $the_query->have_posts() ): ?>
+					<h2>Frameworks:</h2>
+					<ul class="widgetlist">
+					<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+						<li>
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+									the_post_thumbnail( 'small' );
+								} ?>
+								<span><?php the_title(); ?></span>
+							</a>
+						</li>
+					<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+
+				<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
+
+			<?php
+				// args
+				$args = array(
+					'numberposts'	=> -1,
+					'post_type'		=> array('wai_widgets'),
+					'meta_key'		=> 'vendor',
+					'meta_value'	=> get_the_ID()
+				);
+
+				// query
+				$the_query = new WP_Query( $args );
+				?>
+				<?php if( $the_query->have_posts() ): ?>
+					<h2>Widgets:</h2>
+					<ul class="widgetlist">
+					<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+						<li>
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+									the_post_thumbnail( 'small' );
+								} ?>
+								<span><?php the_title(); ?></span>
+							</a>
+						</li>
+					<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+
+				<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
+
+
+			<?php
+				// args
+				$args = array(
+					'numberposts'	=> -1,
+					'post_type'		=> array('wai_templates'),
+					'meta_key'		=> 'vendor',
+					'meta_value'	=> get_the_ID()
+				);
+
+				// query
+				$the_query = new WP_Query( $args );
+				?>
+				<?php if( $the_query->have_posts() ): ?>
+					<h2>Templates:</h2>
+					<ul class="widgetlist">
+					<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+						<li>
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+									the_post_thumbnail( 'small' );
+								} ?>
+								<span><?php the_title(); ?></span>
+							</a>
+						</li>
+					<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+
+				<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
+		<?php else: ?>
+			<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+				the_post_thumbnail( 'medium', array( 'class' => 'alignright' ) );
+			} ?>
+			<dl>
+				<?php
+				$post_object = get_field('vendor');
+
+				if( $post_object ):
+
+					// override $post
+					$post = $post_object;
+					setup_postdata( $post );
+
+					?>
+				    <dt>Vendor</dt>
+				    <dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+				    <?php //<span>Post Object Custom Field: <?php the_field('field_name'); </span> ?>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					<?php endif; ?>
+				<dt>Description</dt>
+				<dd><?php the_field( "description" ); ?></dd>
+				<dt>Website</dt>
+				<dd><a href="<?php the_field( "website" ); ?>"><?php the_field( "website" ); ?></a></dd>
+				<?php if( get_field( 'a11y_statement' ) ): ?>
+				<dt>Accessibility Statement</dt>
+				<dd><a href="<?php the_field( "a11y_statement_url" ); ?>"><?php the_field( "a11y_statement_url" ); ?></a></dd>
+				<?php endif; ?>
+				<dt>Development URL</dt>
+				<dd><a href="<?php the_field( "development_url" ); ?>"><?php the_field( "development_url" ); ?></a></dd>
+			</dl>
+		<?php endif; ?>
+		<?php // the_content(); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wai_components' ),
