@@ -1,3 +1,14 @@
+.not-w3c-notification {
+  display:block;
+  float:none !important;
+  background-color:#FCC;
+  padding: .65em .5em;
+  font-weight: bold;
+  a {
+    border-bottom:2px solid;
+  }
+}
+
 header[role=banner] {
   @include container();
   margin-bottom: 1em;
