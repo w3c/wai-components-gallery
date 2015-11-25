@@ -198,6 +198,7 @@ function wai_components_setup() {
     )
   );
 
+  add_image_size ( 'small', 100, 30 );
 
 }
 endif; // wai_components_setup
