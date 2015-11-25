@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var minifyCss =require('gulp-minify-css');
 var plumber =require('gulp-plumber');
 var uglify = require('gulp-uglify');
+var dirSync = require( 'gulp-directory-sync' );
 
 var sassdir = "sass/**/*.scss";
 
@@ -33,6 +34,12 @@ gulp.task('js', function () {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./js/'));*/
 });
+
+gulp.task( 'sync', function() {
+    return gulp.src( '' )
+        .pipe(dirSync( '/Users/yatil/projects/wai-components-gallery', '/Users/yatil/projects/w3.org/WWW/2008/site/templates/wordpress/w3c_wai_components', { nodelete: false, printSummary: true, ignore: [ 'gulpfile.js', 'package.json','wai-components-gallery.sublime-workspace', 'wai-components-gallery.sublime-project', 'node_modules', '.git', 'CVS', 'sass', '.cvsignore' ] } ));
+        //.on('error', gutil.log);
+} );
 
 gulp.task('watch', function() {
   var watcher = gulp.watch([sassdir, jsdir], ['scss', 'js']);
