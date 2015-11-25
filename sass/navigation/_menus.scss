@@ -1,8 +1,5 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	@include container();
 
 	ul {
 		display: none;
@@ -49,7 +46,7 @@
 		}
 	}
 	li {
-		float: left;
+		flex: 1;
 		position: relative;
 
 		&:hover > a,
@@ -79,7 +76,7 @@
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: flex;
 	}
 }
 
