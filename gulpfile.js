@@ -21,6 +21,7 @@ gulp.task('scss', function () {
         .pipe(minifyCss())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('.'));
+        //.run('sync');
 });
 
 var jsdir = "_js/*.js";
@@ -35,14 +36,14 @@ gulp.task('js', function () {
         .pipe(gulp.dest('./js/'));*/
 });
 
-gulp.task( 'sync', function() {
+gulp.task( 'sync', ['scss'], function() {
     return gulp.src( '' )
         .pipe(dirSync( '/Users/yatil/projects/wai-components-gallery', '/Users/yatil/projects/w3.org/WWW/2008/site/templates/wordpress/w3c_wai_components', { nodelete: false, printSummary: true, ignore: [ 'gulpfile.js', 'package.json','wai-components-gallery.sublime-workspace', 'wai-components-gallery.sublime-project', 'node_modules', '.git', 'CVS', 'sass', '.cvsignore' ] } ));
         //.on('error', gutil.log);
 } );
 
 gulp.task('watch', function() {
-  var watcher = gulp.watch([sassdir, jsdir], ['scss', 'js']);
+  var watcher = gulp.watch([sassdir, '**/*.php'], ['sync']);
   watcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
