@@ -118,6 +118,7 @@ function wai_components_setup() {
 	}
 
   // Add Post types for the Components Gallery
+  /*
   register_post_type( 'wai_vendors',
     array(
       'labels' => array(
@@ -136,7 +137,7 @@ function wai_components_setup() {
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
       'map_meta_cap'        => true,
     )
-  );
+  );*/
 
   register_post_type( 'wai_templates',
     array(
@@ -147,7 +148,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions', 'editor'
       ),
       'rewrite' => array (
       	'slug' => "template",
@@ -155,6 +156,7 @@ function wai_components_setup() {
       ),
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
       'map_meta_cap'        => true,
+      'taxonomies'          => array('post_tag'),
     )
   );
 
@@ -167,7 +169,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions', 'editor'
       ),
       'rewrite' => array (
       	'slug' => "widget",
@@ -175,6 +177,7 @@ function wai_components_setup() {
       ),
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
       'map_meta_cap'        => true,
+      'taxonomies'          => array('post_tag'),
     )
   );
 
@@ -187,7 +190,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions', 'editor'
       ),
       'rewrite' => array (
       	'slug' => "framework",
@@ -195,10 +198,70 @@ function wai_components_setup() {
       ),
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
       'map_meta_cap'        => true,
+      'taxonomies'          => array('post_tag'),
     )
   );
 
-  add_image_size ( 'small', 100, 30 );
+   // Add a taxonomy like categories
+    $labels = array(
+      'name'              => 'Vendors',
+      'singular_name'     => 'Vendor',
+      'search_items'      => 'Search Vendors',
+      'all_items'         => 'All Vendors',
+      'parent_item'       => 'Parent Vendor',
+      'parent_item_colon' => 'Parent Vendor:',
+      'edit_item'         => 'Edit Vendor',
+      'update_item'       => 'Update Vendor',
+      'add_new_item'      => 'Add New Vendor',
+      'new_item_name'     => 'New Vendor Name',
+      'menu_name'         => 'Vendors',
+    );
+
+    $args = array(
+      'hierarchical'      => false,
+      'labels'            => $labels,
+      'show_ui'           => true,
+      'show_admin_column' => true,
+      'query_var'         => true,
+      'meta_box_cb'       => false,
+      'rewrite'           => array( 'slug' => 'vendor' ),
+    );
+
+    register_taxonomy('wai_component_vendor',array('wai_frameworks', 'wai_widgets', 'wai_templates'),$args);
+
+    // Add a taxonomy like tags
+  $labels = array(
+    'name'                       => 'Tags',
+    'singular_name'              => 'Tag',
+    'search_items'               => 'Tags',
+    'popular_items'              => 'Popular Tags',
+    'all_items'                  => 'All Tags',
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => 'Edit Tag',
+    'update_item'                => 'Update Tag',
+    'add_new_item'               => 'Add New Tag',
+    'new_item_name'              => 'New Tag Name',
+    'separate_items_with_commas' => 'Separate Tags with commas',
+    'add_or_remove_items'        => 'Add or remove Tags',
+    'choose_from_most_used'      => 'Choose from most used Tags',
+    'not_found'                  => 'No Tags found',
+    'menu_name'                  => 'Tags',
+  );
+
+  $args = array(
+    'hierarchical'          => false,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array( 'slug' => 'tags' ),
+  );
+
+  register_taxonomy('wai_tags',array('wai_frameworks', 'wai_widgets', 'wai_templates'),$args);
+
+  add_image_size ( 'small', 200, 100 );
 
 }
 endif; // wai_components_setup
@@ -244,6 +307,8 @@ function wai_components_scripts() {
 
 	wp_enqueue_script( 'wai_components-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+  wp_enqueue_script( 'wai_components-svg4everybody', get_template_directory_uri() . '/js/svg4everybody.js', array(), '20130115', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -274,3 +339,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+function wai_icon( $name ) {
+  return '<svg class="icon-'.$name.'"><use xlink:href="'.get_template_directory_uri().'/img/icons.svg#icon-'.$name.'"></use></svg>';
+}
