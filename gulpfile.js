@@ -38,7 +38,7 @@ gulp.task('js', function () {
 
 gulp.task( 'sync', ['scss'], function() {
     return gulp.src( '' )
-        .pipe(dirSync( '/Users/yatil/projects/wai-components-gallery', '/Users/yatil/projects/w3.org/WWW/2008/site/templates/wordpress/w3c_wai_components', { nodelete: false, printSummary: true, ignore: [ 'gulpfile.js', 'package.json','wai-components-gallery.sublime-workspace', 'wai-components-gallery.sublime-project', 'node_modules', '.git', 'CVS', 'sass', '.cvsignore' ] } ));
+        .pipe(dirSync( '/Users/yatil/projects/wai-components-gallery', '/Users/yatil/projects/w3.org/WWW/2008/site/templates/wordpress/w3c_wai_components', { nodelete: false, printSummary: true, ignore: [ 'npm-debug.log', 'gulpfile.js', 'package.json','wai-components-gallery.sublime-workspace', 'wai-components-gallery.sublime-project', 'node_modules', '.git', 'CVS', 'sass', '.cvsignore' ] } ));
         //.on('error', gutil.log);
 } );
 
