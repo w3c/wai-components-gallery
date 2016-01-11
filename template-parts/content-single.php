@@ -9,93 +9,32 @@
 
 ?>
 
+<?php $field = get_fields(); ?>
+<div class="toolbar">
+	<button>
+		<?php echo wai_icon( "share" ); ?>
+		Share link to this widget
+	</button>
+	<?php get_search_form(true); ?>
+</div>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php wai_components_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		<h1 class="entry-title"><?php the_title( ); ?> <small>by <?php echo $field['vendor']->name; ?></small></h1>
 	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-
-		<?php if ( get_post_type( ) == 'wai_vendors' ): ?>
-			<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-				the_post_thumbnail( 'medium', array( 'class' => 'alignright' ) );
-			} ?>
-			<?php
-				// args
-				$args = array(
-					'numberposts'	=> -1,
-					'post_type'		=> array('wai_frameworks'),
-					'meta_key'		=> 'vendor',
-					'meta_value'	=> get_the_ID()
-				);
-
-				// query
-				$the_query = new WP_Query( $args );
-				?>
-				<?php if( $the_query->have_posts() ): ?>
-					<h2>Frameworks:</h2>
-					<ul class="widgetlist">
-					<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-						<li>
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-									the_post_thumbnail( 'small' );
-								} ?>
-								<span><?php the_title(); ?></span>
-							</a>
-						</li>
-					<?php endwhile; ?>
-					</ul>
+	<div class="entry-content entry-content-wrapper">
+		<div class="entry-content-main">
+			<?php the_field( "description" ); ?>
+			<div class="links">
+				<a href="<?php the_field( "website" ); ?>"><?php echo wai_icon( "home" ); ?> <?php _e('Website', 'wai_components'); ?></a>
+				<?php if( get_field( 'a11y_statement' ) ): ?>
+				<a href="<?php the_field( "a11y_statement_url" ); ?>"><?php echo wai_icon( "accessibility" ); ?> <?php _e('Accessibility Statement', 'wai_components'); ?></a>
 				<?php endif; ?>
-
-				<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
-
-			<?php
-				// args
-				$args = array(
-					'numberposts'	=> -1,
-					'post_type'		=> array('wai_widgets'),
-					'meta_key'		=> 'vendor',
-					'meta_value'	=> get_the_ID()
-				);
-
-				// query
-				$the_query = new WP_Query( $args );
-				?>
-				<?php if( $the_query->have_posts() ): ?>
-					<h2>Widgets:</h2>
-					<ul class="widgetlist">
-					<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-						<li>
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-									the_post_thumbnail( 'small' );
-								} ?>
-								<span><?php the_title(); ?></span>
-							</a>
-						</li>
-					<?php endwhile; ?>
-					</ul>
-				<?php endif; ?>
-
-				<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
-
-
-			<?php
-				// args
-				$args = array(
-					'numberposts'	=> -1,
-					'post_type'		=> array('wai_templates'),
-					'meta_key'		=> 'vendor',
-					'meta_value'	=> get_the_ID()
-				);
-
-				// query
-				$the_query = new WP_Query( $args );
+				<!-- TODO: If Github: Show github logo. If not, show generic cloud symbol. -->
+				<a href="<?php the_field( "development_url" ); ?>"><?php echo wai_icon( "cloud" ); ?> <?php _e('Development URL', 'wai_components'); ?></a>
+			</div>
+			<div class="entry-meta">
+				<?php wai_components_posted_on(); ?>
+			</div><!-- .entry-meta -->
 				<button onclick="document.querySelector('#comment_form').removeAttribute('hidden');"><?php echo wai_icon( 'warning' ); ?> Report a problem with this entry</button>
 				<div hidden id="comment_form">
 				<?php
@@ -104,61 +43,36 @@
 						comments_template();
 					endif;
 				?>
-				<?php if( $the_query->have_posts() ): ?>
-					<h2>Templates:</h2>
-					<ul class="widgetlist">
-					<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-						<li>
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-									the_post_thumbnail( 'small' );
-								} ?>
-								<span><?php the_title(); ?></span>
-							</a>
-						</li>
-					<?php endwhile; ?>
-					</ul>
-				<?php endif; ?>
-
-				<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
-		<?php else: ?>
+				</div>
+		</div>
+		<div class="entry-content-side">
 			<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-				the_post_thumbnail( 'medium', array( 'class' => 'alignright' ) );
+				the_post_thumbnail( 'medium' );
 			} ?>
 			<dl>
-				<?php
-				$post_object = get_field('vendor');
-
-				if( $post_object ):
-
-					// override $post
-					$post = $post_object;
-					setup_postdata( $post );
-
-					?>
-				    <dt>Vendor</dt>
-				    <dd><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
-				    <?php //<span>Post Object Custom Field: <?php the_field('field_name'); </span> ?>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-					<?php endif; ?>
-				<dt>Description</dt>
-				<dd><?php the_field( "description" ); ?></dd>
-				<dt>Website</dt>
-				<dd><a href="<?php the_field( "website" ); ?>"><?php the_field( "website" ); ?></a></dd>
-				<?php if( get_field( 'a11y_statement' ) ): ?>
-				<dt>Accessibility Statement</dt>
-				<dd><a href="<?php the_field( "a11y_statement_url" ); ?>"><?php the_field( "a11y_statement_url" ); ?></a></dd>
-				<?php endif; ?>
-				<dt>Development URL</dt>
-				<dd><a href="<?php the_field( "development_url" ); ?>"><?php the_field( "development_url" ); ?></a></dd>
+				<dt>License</dt>
+				<dd>Open Source MIT Licence</dd>
+		    <dt>Vendor</dt>
+				<dd><?php echo get_field( "vendor" )->name; ?></dd>
+				<dt>Contact Email</dt>
+				<dd><a href="mail@example.com">mail@example.com</a></dd>
 			</dl>
-		<?php endif; ?>
+			<!-- TODO only show if Github -->
+			<p><strong>Github statistics for this project:</strong></p>
+			<ul>
+				<li>Latest commit to master: 2015-12-12</li>
+		    <li>Readme information: <a href="#">Readme.txt</a></li>
+				<li>Stars: 3</li>
+				<li>Forks: 27</li>
+				<li>Contributors: Max Mustermann</li>
+			</ul>
+		</div>
 		<?php // the_content(); ?>
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wai_components' ),
-				'after'  => '</div>',
-			) );
+			// wp_link_pages( array(
+			// 	'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wai_components' ),
+			// 	'after'  => '</div>',
+			// ) );
 		?>
 	</div><!-- .entry-content -->
 
