@@ -1,5 +1,5 @@
 .main-navigation {
-	@include container();
+//	@include container();
 
 	ul {
 		display: none;
@@ -46,8 +46,8 @@
 		}
 	}
 	li {
-		flex: 1;
-		position: relative;
+		// flex: 1;
+		// position: relative;
 
 		&:hover > a,
 		&.focus > a {
@@ -76,7 +76,7 @@
 		display: none;
 	}
 	.main-navigation ul {
-		display: flex;
+		display:block;
 	}
 }
 

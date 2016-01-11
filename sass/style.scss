@@ -64,7 +64,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-@import "layout/content-sidebar";
+@import "layout/sidebar-content";
 
 /*--------------------------------------------------------------
 # Forms
@@ -110,3 +110,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# WAI specific styles
+--------------------------------------------------------------*/
+@import "wai-style";

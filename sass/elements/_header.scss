@@ -8,7 +8,7 @@
     border-bottom:2px solid;
   }
 }
-
+/*
 header[role=banner] {
   @include container();
   margin-bottom: 1em;
@@ -29,10 +29,10 @@ header[role=banner] {
       &:hover, &:focus {text-decoration: underline;}
   }
 }
-
+*/
 .page-title {
   font-size: 1.75em;
-  @extend .font-secondary;
+  font-family: $font__main;
   margin-bottom: 1em;
   line-height: 1;
   padding: .25em 0 0;
@@ -41,7 +41,7 @@ header[role=banner] {
     padding: .25em 0 0;
     display:block;
     font-size: .5em;
-    @extend .font-primary;
+    font-family: $font__serif;
   }
   a {
     color: inherit;
