@@ -96,6 +96,13 @@
 
 				// query
 				$the_query = new WP_Query( $args );
+				<button onclick="document.querySelector('#comment_form').removeAttribute('hidden');"><?php echo wai_icon( 'warning' ); ?> Report a problem with this entry</button>
+				<div hidden id="comment_form">
+				<?php
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
 				?>
 				<?php if( $the_query->have_posts() ): ?>
 					<h2>Templates:</h2>
