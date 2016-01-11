@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main tiled" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -20,6 +20,23 @@ get_header(); ?>
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+
+			<div class="toolbar">
+				<button>
+					<?php echo wai_icon( "share" ); ?>
+					Share link to this view
+				</button>
+				<?php get_search_form(true); ?>
+				<label>
+					Sort by:
+					<select name="orderby" id="orderby">
+						<option value="da">Date Added</option>
+						<option value="title">Title A–Z</option>
+					</select>
+				</label>
+			</div>
+
+			<div class="tile-content">
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -31,10 +48,12 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/content', get_post_format() );
+					get_template_part( 'template-parts/content', 'tiles' );
 				?>
 
 			<?php endwhile; ?>
+
+			</div>
 
 			<?php the_posts_navigation(); ?>
 
