@@ -261,6 +261,33 @@ function wai_components_setup() {
 
   register_taxonomy('wai_tags',array('wai_frameworks', 'wai_widgets', 'wai_templates'),$args);
 
+   // Add a taxonomy like categories
+  $labels = array(
+    'name'              => 'Licenses',
+    'singular_name'     => 'License',
+    'search_items'      => 'Search Licenses',
+    'all_items'         => 'All Licenses',
+    'parent_item'       => 'Parent License',
+    'parent_item_colon' => 'Parent License:',
+    'edit_item'         => 'Edit License',
+    'update_item'       => 'Update License',
+    'add_new_item'      => 'Add New License',
+    'new_item_name'     => 'New License Name',
+    'menu_name'         => 'Licenses',
+  );
+
+  $args = array(
+    'hierarchical'      => false,
+    'labels'            => $labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'meta_box_cb'       => false,
+    'rewrite'           => array( 'slug' => 'license' ),
+  );
+
+  register_taxonomy('wai_licenses',array('wai_frameworks', 'wai_widgets', 'wai_templates'),$args);
+
   add_image_size ( 'small', 200, 100 );
 
 }
