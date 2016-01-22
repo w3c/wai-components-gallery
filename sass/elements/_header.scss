@@ -8,28 +8,7 @@
     border-bottom:2px solid;
   }
 }
-/*
-header[role=banner] {
-  @include container();
-  margin-bottom: 1em;
-  border-top: 5px solid #930;
-  div {
-    margin: 0 auto;
-    @include mq($medium) {
-      float: right;
-    }
-  }
-  img {
-    display:inline-block;
-    vertical-align: middle;
-  }
-  a {
-      text-decoration: none;
-      display: inline-block;
-      &:hover, &:focus {text-decoration: underline;}
-  }
-}
-*/
+
 .page-title {
   font-size: 1.75em;
   font-family: $font__main;

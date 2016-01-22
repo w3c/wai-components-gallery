@@ -5,7 +5,7 @@ $medium: 43em; //* 700px */
 $big:    56em; //* 900px */
 $large:  81em; //* 1300px */
 
-#page {
+#masthead {
   padding: 0 15px;
 }
 
@@ -49,19 +49,19 @@ header[role=banner] {
 .tile-content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   article {
-    flex: 0 0 30%;
-    margin: 0 15px 15px 0;
+    flex: 0 1 49.5%;
+    margin: 0 0 15px 0;
     >a {
-      border: 1px solid #444;
-      border-radius: 3px;
+      border-radius: 2px;
       background-color: #fff;
       padding: 10px;
       color: inherit;
       text-decoration:none;
       display:block;
       &:hover, &:focus {
-        box-shadow: 0 0 10px #3C6DA5;
+        box-shadow: 0 0 6px #3C6DA5;
         h2 {
           color: #3C6DA5;
           border-bottom-color: #3C6DA5;
@@ -74,14 +74,22 @@ header[role=banner] {
     font-weight: normal;
     border-bottom: 1px solid #444;
   }
+  .entry-content {
+    display: flex;
+  }
   .thumbnail {
-    min-height: 150px;
+    height: 150px;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
+    padding-right: 5px;
+    border-right: 1px solid #cdcdcd;
   }
   svg, img {
     max-height: 140px;
+    max-width: 140px;
     width: auto;
     fill: #ccc;
   }
@@ -94,8 +102,15 @@ header[role=banner] {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 15px;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  padding: .25em 1em .25em 0em;
   > * {
-    margin-left: 10px;
+    margin-left: 1em;
+  }
+  ~ * {
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
 
@@ -119,6 +134,10 @@ Example showing how to change the color/size of the icons:
   a {
     font-size: 1.5em;
   }
+  .current-menu-item a::after {
+    content: ' ◀︎';
+    font-size: .75em;
+  }
 }
 
 .tagcloud a {
@@ -127,6 +146,10 @@ Example showing how to change the color/size of the icons:
 
 #tag_cloud-3 .tagcloud a {
   display: block;
+}
+
+.entry-title small {
+  opacity: .9;
 }
 
 .entry-content-wrapper {
