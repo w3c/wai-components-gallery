@@ -7,6 +7,8 @@ var minifyCss =require('gulp-minify-css');
 var plumber =require('gulp-plumber');
 var uglify = require('gulp-uglify');
 var dirSync = require( 'gulp-directory-sync' );
+var shell = require('gulp-shell');
+var notify = require("gulp-notify");
 
 var sassdir = "sass/**/*.scss";
 
@@ -42,8 +44,16 @@ gulp.task( 'sync', ['scss'], function() {
         //.on('error', gutil.log);
 } );
 
+gulp.task('cvs', ['sync'], shell.task([
+  'cd ~/projects/w3.org/ && cvs commit -m \"\" WWW/2008/site/templates/wordpress/w3c_wai_components/'
+]));
+
+gulp.task('notify', ['cvs'], function() {
+    gulp.src('index.php').pipe(notify("Reload!"));
+});
+
 gulp.task('watch', function() {
-  var watcher = gulp.watch([sassdir, '**/*.php'], ['sync']);
+  var watcher = gulp.watch([sassdir, jsdir, '**/*.svg', '**/*.php'], ['notify']);
   watcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
