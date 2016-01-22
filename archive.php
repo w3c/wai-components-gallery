@@ -12,15 +12,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main tiled" role="main">
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
 			<div class="toolbar">
 				<button>
 					<?php echo wai_icon( "share" ); ?>
@@ -35,6 +26,19 @@ get_header(); ?>
 					</select>
 				</label>
 			</div>
+
+		<?php if ( have_posts() ) : ?>
+
+			<header class="page-header">
+				<?php
+					if ( is_post_type_archive() ) {
+			      echo '<h1 class="page-title">' . post_type_archive_title( '', false ) . '</h1>';
+			    } else {
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
+					}
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				?>
+			</header><!-- .page-header -->
 
 			<div class="tile-content">
 
