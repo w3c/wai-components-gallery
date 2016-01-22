@@ -148,10 +148,10 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-	'title', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "template",
+      	'slug' => "template/%vendor%",
       	'with_front' => "false"
       ),
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
@@ -169,10 +169,10 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-	'title', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "widget",
+      	'slug' => "widget/%vendor%",
       	'with_front' => "false"
       ),
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
@@ -190,10 +190,10 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-	'title', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "framework",
+      	'slug' => "framework/%vendor%",
       	'with_front' => "false"
       ),
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
@@ -376,3 +376,21 @@ function load_custom_wp_admin_style() {
         wp_enqueue_style( 'custom_wp_admin_css' );
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+
+add_filter('post_link', 'vendor_permalink', 10, 3);
+add_filter('post_type_link', 'vendor_permalink', 10, 3);
+
+function vendor_permalink($permalink, $post_id, $leavename) {
+    if (strpos($permalink, '%vendor%') === FALSE) return $permalink;
+
+        // Get post
+        $post = get_post($post_id);
+        if (!$post) return $permalink;
+
+        // Get taxonomy terms
+        $terms = wp_get_object_terms($post->ID, 'wai_component_vendor');
+        if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0])) $taxonomy_slug = $terms[0]->slug.'/';
+        else $taxonomy_slug = '';
+
+    return str_replace('%vendor%/', $taxonomy_slug, $permalink);
+}
