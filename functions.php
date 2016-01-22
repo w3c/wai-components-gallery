@@ -148,7 +148,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'thumbnail', 'comments', 'revisions', 'editor'
+	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
       	'slug' => "template",
@@ -169,7 +169,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'thumbnail', 'comments', 'revisions', 'editor'
+	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
       	'slug' => "widget",
@@ -190,7 +190,7 @@ function wai_components_setup() {
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'thumbnail', 'comments', 'revisions', 'editor'
+	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
       	'slug' => "framework",
