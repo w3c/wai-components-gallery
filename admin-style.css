@@ -1,0 +1,9 @@
+.acf-taxonomy-field .acf-icon {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  right: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
