@@ -51,13 +51,18 @@
 			} ?>
 			<dl>
 				<dt>License</dt>
-				<dd>Open Source MIT Licence</dd>
+				<dd><a href="<?php echo get_term_link( get_field( "license" ) ); ?>"><?php echo get_field( "license" )->name; ?></a></dd>
 		    <dt>Vendor</dt>
-				<dd><?php echo get_field( "vendor" )->name; ?></dd>
-				<dt>Contact Email</dt>
-				<dd><a href="mail@example.com">mail@example.com</a></dd>
+				<dd><a href="<?php echo get_term_link( get_field( "vendor" ) ); ?>"><?php echo get_field( "vendor" )->name; ?></a></dd>
+				<?php if ( get_field( "contact_url" ) ) { ?>
+					<dt>Contact URL</dt>
+					<dd><a href="<?php echo get_field( "contact_url" ); ?>"><?php echo get_field( "contact_url" ); ?></a></dd>
+				<?php } elseif ( get_field( "contact_email" ) ) { ?>
+					<dt>Contact Email</dt>
+					<dd><a href="mailto:<?php echo get_field( "contact_email" ); ?>"><?php echo get_field( "contact_email" ); ?></a></dd>
+				<?php } ?>
 			</dl>
-			<!-- TODO only show if Github -->
+			<?php // if ( strpos ( get_field( "development_url" ) , 'github.com' ) !== FALSE ) { ?>
 			<p><strong>Github statistics for this project:</strong></p>
 			<ul>
 				<li>Latest commit to master: 2015-12-12</li>
@@ -66,6 +71,7 @@
 				<li>Forks: 27</li>
 				<li>Contributors: Max Mustermann</li>
 			</ul>
+			<?php // } ?>
 		</div>
 		<?php // the_content(); ?>
 		<?php
