@@ -151,7 +151,7 @@ function wai_components_setup() {
       	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "template/%vendor%",
+      	'slug' => "template",
       	'with_front' => "false"
       ),
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
@@ -172,7 +172,7 @@ function wai_components_setup() {
       	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "widget/%vendor%",
+      	'slug' => "widget",
       	'with_front' => "false"
       ),
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
@@ -193,7 +193,7 @@ function wai_components_setup() {
       	'title', 'thumbnail', 'comments', 'revisions'
       ),
       'rewrite' => array (
-      	'slug' => "framework/%vendor%",
+      	'slug' => "framework",
       	'with_front' => "false"
       ),
       'capability_type'     => array('wai_custom_post','wai_custom_posts'),
@@ -377,20 +377,20 @@ function load_custom_wp_admin_style() {
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
-add_filter('post_link', 'vendor_permalink', 10, 3);
-add_filter('post_type_link', 'vendor_permalink', 10, 3);
+// function vendor_permalink($permalink, $post_id, $leavename) {
+//     if (strpos($permalink, '%vendor%') === FALSE) return $permalink;
 
-function vendor_permalink($permalink, $post_id, $leavename) {
-    if (strpos($permalink, '%vendor%') === FALSE) return $permalink;
+//         // Get post
+//         $post = get_post($post_id);
+//         if (!$post) return $permalink;
 
-        // Get post
-        $post = get_post($post_id);
-        if (!$post) return $permalink;
+//         // Get taxonomy terms
+//         $terms = wp_get_object_terms($post->ID, 'wai_component_vendor');
+//         if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0])) $taxonomy_slug = $terms[0]->slug.'/';
+//         else $taxonomy_slug = '';
 
-        // Get taxonomy terms
-        $terms = wp_get_object_terms($post->ID, 'wai_component_vendor');
-        if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0])) $taxonomy_slug = $terms[0]->slug.'/';
-        else $taxonomy_slug = '';
+//     return str_replace('%vendor%/', $taxonomy_slug, $permalink);
+// }
 
-    return str_replace('%vendor%/', $taxonomy_slug, $permalink);
-}
+// add_filter('post_link', 'vendor_permalink', 10, 3);
+// add_filter('post_type_link', 'vendor_permalink', 10, 3);
