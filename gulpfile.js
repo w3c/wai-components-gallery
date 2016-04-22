@@ -19,7 +19,7 @@ gulp.task('scss', function () {
         .pipe(sass())
         //.pipe(gulp.dest('.'))
         .pipe(autoprefixer())
-        .pipe(concat('style.css'))
+        //.pipe(concat('style.css'))
         .pipe(minifyCss())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('.'));
