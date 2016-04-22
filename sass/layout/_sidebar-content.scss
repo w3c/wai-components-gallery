@@ -4,13 +4,14 @@
 
 .content-area {
 	order:1;
+  flex-grow: 1;
 }
 
 #secondary {
-	flex: 0 0 $size__site-sidebar;
-  background-color: #eee;
+	flex: 0 0 300px !important;
+  background-color: #DDD;
   order:0;
-  padding: 0 1em;
+  padding: 0;
 }
 
 .site-footer {
