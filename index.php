@@ -14,20 +14,26 @@
 
 get_header(); ?>
 
+
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main tiled" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php $the_query = new WP_Query( array( 'page_id' => 336 ) ); ?>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
+		<?php if ( $the_query->have_posts() ) : ?>
+
+			<?php //if ( is_home() && ! is_front_page() ) : ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 			<?php endif; ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<div class="tile-content">
 
+			<?php /* Start the Loop */ ?>
+
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<?php //var_dump($query->thepost()); ?>
 				<?php
 
 					/*
@@ -35,18 +41,23 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/content', get_post_format() );
+					get_template_part( 'template-parts/content', 'page') ;
 				?>
 
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
 
-		<?php else : ?>
+		<?php /*else : ?>
 
+			<?php var_dump(the_post(336));?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php endif; ?>
+		<?php endif;*/ ?>
+
+		<?php the_posts_navigation(); ?>
+
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
