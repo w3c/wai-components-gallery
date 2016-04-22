@@ -23,6 +23,7 @@
 <body <?php body_class(); ?>>
 <div class="not-w3c-notification">This is an Editor’s draft, for <em>preview purposes only</em>.</div>
 <div id="page" class="hfeed site">
+  <a class="skip-link screen-reader-text" href="#search_filter_register_widget-2"><?php esc_html_e( 'Skip to filters', 'wai_components' ); ?></a>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wai_components' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -37,7 +38,10 @@
 			<?php else : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
     	<?php endif; ?>
-      <?php bloginfo( 'name' ); ?> <span class="subheading"><?php bloginfo( 'description' ); ?></span>
+      <?php bloginfo( 'name' ); ?>
+      <?php if ( $_GET['hidesubhead'] == false ) : ?>
+        <span class="subheading"><?php bloginfo( 'description' ); ?></span>
+      <?php endif; ?>
       <?php if ( is_front_page() && is_home() ) : ?>
       	</span>
 			<?php else : ?>
@@ -45,5 +49,7 @@
     	<?php endif; ?>
     </span>
 	</header><!-- #masthead -->
-
+  <div>
+    <p><strong>Information on this page is provided by vendors and others. W3C does not endorse specific products. See <a href="#text-4">Important Disclaimer</a>.</strong></p>
+  </div>
 	<div id="content" class="site-content">
