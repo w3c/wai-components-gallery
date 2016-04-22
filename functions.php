@@ -139,16 +139,37 @@ function wai_components_setup() {
     )
   );*/
 
+  register_post_type( 'wai_widgets',
+    array(
+      'labels' => array(
+        'name' => __( 'Components' ),
+        'singular_name' => __( 'Component' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array(
+        'title', 'thumbnail', 'comments', 'revisions', 'author'
+      ),
+      'rewrite' => array (
+        'slug' => "widget",
+        'with_front' => "false"
+      ),
+      'capability_type'     => array('wai_custom_post','wai_custom_posts'),
+      'map_meta_cap'        => true,
+      'taxonomies'          => array('post_tag'),
+    )
+  );
+
   register_post_type( 'wai_templates',
     array(
       'labels' => array(
-        'name' => __( 'Templates' ),
+        'name' => __( 'Templates (Do not use!)' ),
         'singular_name' => __( 'Template' )
       ),
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions', 'author'
       ),
       'rewrite' => array (
       	'slug' => "template",
@@ -160,37 +181,16 @@ function wai_components_setup() {
     )
   );
 
-  register_post_type( 'wai_widgets',
-    array(
-      'labels' => array(
-        'name' => __( 'Widgets' ),
-        'singular_name' => __( 'Widget' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'supports' => array(
-      	'title', 'thumbnail', 'comments', 'revisions'
-      ),
-      'rewrite' => array (
-      	'slug' => "widget",
-      	'with_front' => "false"
-      ),
-      'capability_type'     => array('wai_custom_post','wai_custom_posts'),
-      'map_meta_cap'        => true,
-      'taxonomies'          => array('post_tag'),
-    )
-  );
-
   register_post_type( 'wai_frameworks',
     array(
       'labels' => array(
-        'name' => __( 'Frameworks' ),
+        'name' => __( 'Frameworks (Do not use!)' ),
         'singular_name' => __( 'Framework' )
       ),
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-      	'title', 'thumbnail', 'comments', 'revisions'
+      	'title', 'thumbnail', 'comments', 'revisions', 'author'
       ),
       'rewrite' => array (
       	'slug' => "framework",
@@ -200,6 +200,13 @@ function wai_components_setup() {
       'map_meta_cap'        => true,
       'taxonomies'          => array('post_tag'),
     )
+  );
+
+  $wai_taxonomy_capabilities = array(
+    'manage_terms'               => 'read',
+    'edit_terms'                 => 'read',
+    'delete_terms'               => 'manage_categories',
+    'assign_terms'               => 'read',
   );
 
    // Add a taxonomy like categories
@@ -224,10 +231,39 @@ function wai_components_setup() {
       'show_admin_column' => true,
       'query_var'         => true,
       'meta_box_cb'       => false,
+      'capabilities' => $wai_taxonomy_capabilities,
       'rewrite'           => array( 'slug' => 'vendor' ),
     );
 
     register_taxonomy('wai_component_vendor',array('wai_frameworks', 'wai_widgets', 'wai_templates'),$args);
+
+   // Add a taxonomy like categories
+    $labels = array(
+      'name'              => 'Component Types',
+      'singular_name'     => 'Component Type',
+      'search_items'      => 'Search Component Types',
+      'all_items'         => 'All Component Types',
+      'parent_item'       => 'Parent Component Type',
+      'parent_item_colon' => 'Parent Component Type:',
+      'edit_item'         => 'Edit Component Type',
+      'update_item'       => 'Update Component Type',
+      'add_new_item'      => 'Add New Component Type',
+      'new_item_name'     => 'New Component Type Name',
+      'menu_name'         => 'Component Types',
+    );
+
+    $args = array(
+      'hierarchical'      => false,
+      'labels'            => $labels,
+      'show_ui'           => true,
+      'show_admin_column' => true,
+      'query_var'         => true,
+      'meta_box_cb'       => false,
+      'capabilities' => $wai_taxonomy_capabilities,
+      'rewrite'           => array( 'slug' => 'type' ),
+    );
+
+    register_taxonomy('wai_component_types',array('wai_widgets'),$args);
 
     // Add a taxonomy like tags
   $labels = array(
@@ -256,6 +292,7 @@ function wai_components_setup() {
     'show_admin_column'     => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var'             => true,
+    'capabilities'          => $wai_taxonomy_capabilities,
     'rewrite'               => array( 'slug' => 'tags' ),
   );
 
@@ -283,12 +320,42 @@ function wai_components_setup() {
     'show_admin_column' => true,
     'query_var'         => true,
     'meta_box_cb'       => false,
+    'capabilities'      => $wai_taxonomy_capabilities,
     'rewrite'           => array( 'slug' => 'license' ),
   );
 
   register_taxonomy('wai_licenses',array('wai_frameworks', 'wai_widgets', 'wai_templates'),$args);
 
+  // Add a taxonomy like categories
+    $labels = array(
+      'name'              => 'Content Management Systems',
+      'singular_name'     => 'Content Management System',
+      'search_items'      => 'Search Content Management Systems',
+      'all_items'         => 'All Content Management Systems',
+      'parent_item'       => 'Parent Content Management System',
+      'parent_item_colon' => 'Parent Content Management System:',
+      'edit_item'         => 'Edit Content Management System',
+      'update_item'       => 'Update Content Management System',
+      'add_new_item'      => 'Add New Content Management System',
+      'new_item_name'     => 'New Content Management System Name',
+      'menu_name'         => 'Content Management Systems',
+    );
+
+    $args = array(
+      'hierarchical'      => false,
+      'labels'            => $labels,
+      'show_ui'           => true,
+      'show_admin_column' => true,
+      'query_var'         => true,
+      'meta_box_cb'       => false,
+      'capabilities' => $wai_taxonomy_capabilities,
+      'rewrite'           => array( 'slug' => 'cms' ),
+    );
+
+    register_taxonomy('wai_cms',array('wai_widgets'),$args);
+
   add_image_size ( 'small', 200, 100 );
+  add_image_size ( 'wai_large', 400, 600 );
 
 }
 endif; // wai_components_setup
@@ -367,15 +434,28 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-function wai_icon( $name ) {
-  return '<svg class="icon-'.$name.'"><use xlink:href="'.get_template_directory_uri().'/img/icons.svg#icon-'.$name.'"></use></svg>';
+function wai_icon( $name, $label ) {
+  if ($label) {
+    $aria = 'aria-label="'.$label.'"';
+  } else {
+    $aria = 'aria-hidden="true"';
+  }
+  $aria = " ".$aria;
+  return '<svg class="icon-'.$name.'"'.$aria.'><use xlink:href="'.get_template_directory_uri().'/img/icons.svg#icon-'.$name.'"></use></svg>';
 }
 
 function load_custom_wp_admin_style() {
         wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/admin-style.css', false, '1.0.0' );
         wp_enqueue_style( 'custom_wp_admin_css' );
+        wp_register_script( 'custom_wp_admin_js', get_template_directory_uri() . '/admin-script.js', ["jquery"], '1.0.0' );
+        wp_enqueue_script( 'custom_wp_admin_js' );
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+
+add_action('wp_print_styles', 'mytheme_dequeue_css_from_plugins', 100);
+function mytheme_dequeue_css_from_plugins()  {
+  wp_dequeue_style( "search-filter-plugin-styles-css" );
+}
 
 // function vendor_permalink($permalink, $post_id, $leavename) {
 //     if (strpos($permalink, '%vendor%') === FALSE) return $permalink;
