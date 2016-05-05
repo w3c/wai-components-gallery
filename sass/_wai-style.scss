@@ -151,11 +151,14 @@ header[role=banner] {
   }
   .thumbnail {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 5px 0;
-    flex: 0 0 212px;
+    padding: 10px 0 0;
+    flex: 0 0 112px;
     border-right: 1px solid #cdcdcd;
+    @include mq($big) {
+      flex: 0 0 212px;
+    }
   }
   .description {
     flex-grow:1;
@@ -167,13 +170,15 @@ header[role=banner] {
     }
   }
   img {
-    max-height: 200px;
-    max-width: 200px;
     width: auto;
     fill: #ccc;
     border: 1px solid #555;
-    border-top-width: 3px;
-    border-radius: 2px 2px 0 0;
+    max-width: 100px;
+    max-height: 100px;
+    @include mq($big) {
+      max-height: 200px;
+      max-width: 200px;
+    }
   }
   .github {
     img, svg {

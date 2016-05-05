@@ -1,16 +1,22 @@
 .site-content {
-  display:flex;
+  @include mq($medium) {
+    display:flex;
+  }
 }
 
 .content-area {
-	order:1;
-  flex-grow: 1;
+  @include mq($medium) {
+    order:1;
+    flex-grow: 1;
+  }
 }
 
 #secondary {
-	flex: 0 0 300px !important;
-  background-color: #DDD;
-  order:0;
+  @include mq($medium) {
+    flex: 0 0 300px !important;
+    background-color: #DDD;
+    order:0;
+  }
   padding: 0;
 }
 
