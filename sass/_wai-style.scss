@@ -192,7 +192,7 @@ header[role=banner] {
   align-content: center;
   margin-bottom: 15px;
   background-color: #ddd;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #999;
   padding: .25em 1em .25em 0em;
   > div:first-child {
     flex:1;
@@ -339,9 +339,13 @@ Example showing how to change the color/size of the icons:
   >ul {
     >li {
       padding: 10px;
-      &:nth-child(2n) {
-        background-color: #eee;
+      border-bottom: 1px solid #999;
+      &:last-child {
+        border-bottom:none;
       }
+      // &:nth-child(2n) {
+      //   background-color: #eee;
+      // }
     }
   }
   [data-operator] li {
