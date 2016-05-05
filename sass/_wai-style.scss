@@ -611,7 +611,17 @@ footer[role=contentinfo] h2, footer[role=contentinfo] .navigation .topic, .navig
   font-size: .85em;
 }
 
+.type-page {
+  margin: 0 15px;
+  .entry-title {
+    margin-top: 0;
+  }
+  .entry-content {
+    margin-top: 0;
+  }
+}
 #post-336 {
+  margin:0;
   > .entry-header { display: none; }
   > .entry-content { margin-top: 0; }
 }
