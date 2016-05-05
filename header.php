@@ -33,7 +33,7 @@
       <a href="http://w3.org/WAI/" class="wai"><img alt="Web Accessibility Initiative" src="<?php bloginfo('template_url'); ?>/img/wai.png"></a>
     </div>
     <span class="page-title">
-    	<?php if ( is_front_page() && is_home() ) : ?>
+    	<?php if ( is_front_page() ) : ?>
       	<span class="current-a">
 			<?php else : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -42,7 +42,7 @@
       <?php if ( $_GET['hidesubhead'] == false ) : ?>
         <span class="subheading"><?php bloginfo( 'description' ); ?></span>
       <?php endif; ?>
-      <?php if ( is_front_page() && is_home() ) : ?>
+      <?php if ( is_front_page() ) : ?>
       	</span>
 			<?php else : ?>
 				</a>
