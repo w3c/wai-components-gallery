@@ -120,7 +120,9 @@ if ( $query->have_posts() )
 
   <div class="entry-content">
     <div class="thumbnail">
-      <img src="<?php bloginfo('template_url'); ?>/screenshot.php?url=<?php urlencode(the_field( "website" )); ?>&amp;w=200" alt="Screenshot of “<?php the_title( ); ?>”">
+      <a aria-hidden="true" href="<?php the_field( "website" ); ?>">
+        <img src="<?php bloginfo('template_url'); ?>/screenshot.php?url=<?php urlencode(the_field( "website" )); ?>&amp;w=200" alt="Screenshot of “<?php the_title( ); ?>”">
+      </a>
     </div>
     <div class="description">
       <div class="desc-inner">
@@ -171,7 +173,7 @@ if ( $query->have_posts() )
       <?php if(get_field('license')) { ?>
         <li><strong>License:</strong> <?php echo get_field('license')->name; ?></li>
       <?php } ?>
-      <?php if(get_field('a11y_statement')) { ?>
+      <?php if(get_field('a11y_statement_url')) { ?>
         <li><strong>Accessibility:</strong> <a href="<?php echo get_field('a11y_statement_url'); ?>">Statement provided</a></li>
       <?php } ?>
       <?php if (get_field("development_url")) { ?>
