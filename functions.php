@@ -143,7 +143,16 @@ function wai_components_setup() {
     array(
       'labels' => array(
         'name' => __( 'Components' ),
-        'singular_name' => __( 'Component' )
+        'singular_name' => __( 'Component' ),
+        'add_new'            => __( 'Add New Component', 'book'),
+        'add_new_item'       => __( 'Add New Component'),
+        'new_item'           => __( 'New Component'),
+        'edit_item'          => __( 'Edit Component'),
+        'view_item'          => __( 'View Component'),
+        'all_items'          => __( 'All Components'),
+        'search_items'       => __( 'Search Components'),
+        'not_found'          => __( 'No components found.'),
+        'not_found_in_trash' => __( 'No components found in Trash.')
       ),
       'public' => true,
       'has_archive' => true,
@@ -159,7 +168,7 @@ function wai_components_setup() {
       'taxonomies'          => array('post_tag'),
     )
   );
-
+/*
   register_post_type( 'wai_templates',
     array(
       'labels' => array(
@@ -200,7 +209,7 @@ function wai_components_setup() {
       'map_meta_cap'        => true,
       'taxonomies'          => array('post_tag'),
     )
-  );
+  );*/
 
   $wai_taxonomy_capabilities = array(
     'manage_terms'               => 'read',
