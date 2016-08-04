@@ -1,4 +1,5 @@
 .site-content {
+  clear:both;
   @include mq($medium) {
     display:flex;
   }

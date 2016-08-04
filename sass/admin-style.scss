@@ -59,3 +59,47 @@
   width: auto !important;
   font-family: inherit !important;
 }
+
+#acf-group_572c88e895390 {
+  /* submission criteria box*/
+  background-color: #fff;
+  border-left: 2px solid #A72300;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
+ul.componenttypes {
+  li {
+    margin-bottom: 0;
+    list-style-type: disc;
+    margin-left: 2em;
+  }
+}
+
+.description {
+ color: #595959;
+}
+
+#login, .login {
+  padding-top: 40px;
+  h1 {
+    a {
+      background-image: url(https://www.w3.org/Icons/w3c_home), url(https://www.w3.org/WAI/images/wai-temp);
+      padding-bottom: 10px;
+      background-size: 72px, 194px;
+      background-position: 0 top, 73px top;
+      padding-top: 48px;
+      text-indent: 0;
+      width: auto;
+      max-width: 20em;
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+}
+
+#login, .login {
+  #nav {
+    display: none;
+  }
+}
