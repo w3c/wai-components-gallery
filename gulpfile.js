@@ -53,7 +53,7 @@ gulp.task('notify', ['cvs'], function() {
 });
 
 gulp.task('watch', function() {
-  var watcher = gulp.watch([sassdir, jsdir, '**/*.svg', '**/*.php'], ['notify']);
+  var watcher = gulp.watch([sassdir, jsdir, '**/*.svg', '**/*.php', '*.js'], ['notify']);
   watcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
