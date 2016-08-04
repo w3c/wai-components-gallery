@@ -49,7 +49,10 @@
     	<?php endif; ?>
     </span>
 	</header><!-- #masthead -->
-  <div>
-    <p><strong>Information on this page is provided by vendors and others. W3C does not endorse specific products. See <a href="#text-4">Important Disclaimer</a>.</strong></p>
+  <div class="note"><a href="https://www.w3.org/blog/wai-components-gallery/wp-login.php?redirect_to=https%3A%2F%2Fwww.w3.org%2Fblog%2Fwai-components-gallery%2Fwp-admin%2Fpost-new.php%3Fpost_type%3Dwai_widgets">Add your Component</a><br><small>Requires a (free) <a href="https://www.w3.org/Help/Account/">W3C Account</a>. Components must follow the <a href="https://www.w3.org/blog/wai-components-gallery/submission-guidelines/">Submission Guidelines</a>.</small></div>
+  <div class="intro">
+    <p><strong>
+      Information on this page is provided by vendors and others. W3C does not endorse specific products nor make assertions about their accessibility. See <a href="#text-4">Important Disclaimer</a>.
+    </strong></p>
   </div>
 	<div id="content" class="site-content">
