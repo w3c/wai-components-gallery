@@ -451,11 +451,27 @@ function load_custom_wp_admin_style() {
         wp_enqueue_script( 'custom_wp_admin_js' );
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+add_action( 'login_enqueue_scripts', 'load_custom_wp_admin_style' );
 
 add_action('wp_print_styles', 'mytheme_dequeue_css_from_plugins', 100);
 function mytheme_dequeue_css_from_plugins()  {
   wp_dequeue_style( "search-filter-plugin-styles-css" );
 }
+
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return '';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+function my_login_message() {
+    return 'Requires a (free) <a href="https://www.w3.org/Help/Account/">W3C Account</a>.<br><small><a href="https://www.w3.org/accounts/request">Request account</a>. <a href="https://www.w3.org/accounts/recover">Recover your Password</a>.</small>';
+}
+add_filter( 'login_message', 'my_login_message' );
 
 // function vendor_permalink($permalink, $post_id, $leavename) {
 //     if (strpos($permalink, '%vendor%') === FALSE) return $permalink;
