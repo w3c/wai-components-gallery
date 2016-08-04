@@ -47,7 +47,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php // the_posts_navigation(); ?>
 
 		<?php /*else : ?>
 
@@ -56,7 +56,7 @@ get_header(); ?>
 
 		<?php endif;*/ ?>
 
-		<?php the_posts_navigation(); ?>
+		<?php // the_posts_navigation(); ?>
 
 		</div>
 
