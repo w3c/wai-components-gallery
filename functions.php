@@ -403,6 +403,10 @@ function wai_components_scripts() {
 
   wp_enqueue_script( 'wai_components-svg4everybody', get_template_directory_uri() . '/js/svg4everybody.js', array(), '20130115', true );
 
+   wp_enqueue_script( 'wai_components-sharebox', get_template_directory_uri() . '/js/sharebox.js', array(), '20130115', true );
+
+   wp_enqueue_script( 'wai_components-script', get_template_directory_uri() . '/script.js', array(), '20130115', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
