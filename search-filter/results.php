@@ -84,15 +84,14 @@ if ( $query->have_posts() )
     </div>
     <div class="results-details">
 
-<?php /*
-    <nav class="pagination" labelledby="toppaginationtitle">
+    <nav class="pagination" label="Seitennavigation">
       <ul role="presentation">
         <li class="nav-next" role="presentation"><?php previous_posts_link( 'Previous Page' ); ?></li>
         <li class="nav-info" aria-hidden="true" id="toppaginationtitle"><span class="visuallyhidden">Pagination: </span>Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?></li>
         <li class="nav-prev" role="presentation"><?php next_posts_link( 'Next Page', $query->max_num_pages ); ?></li>
       </ul>
     </nav>
-*/?>
+
   <?php
   while ($query->have_posts())
   {
@@ -115,7 +114,7 @@ if ( $query->have_posts() )
       <?php wai_components_posted_on(); ?>
     </div><!-- .entry-meta -->
     <?php endif; ?>
-    <div class="permalink_wrapper"><a href="#component-<?php the_ID();?>" class="btn"><?php echo wai_icon('share'); ?><use xlink:href="#i-share"></use></svg>&nbsp;Share</a><div class="sharebox"><p><label>Link to this view:<input value="" readonly="" type="url"> Shortcut to copy the link: <kbd>ctrl</kbd>+<kbd>C</kbd> <em>or</em> <kbd>⌘</kbd><kbd>C</kbd></label></p><p><a href="">E-mail a link to this section</a><button>Close</button></p></div></div>
+    <div class="permalink_wrapper"><a href="<?php the_permalink(); ?>" class="btn"><?php echo wai_icon('share'); ?><use xlink:href="#i-share"></use></svg>&nbsp;Share</a><div class="sharebox"><p><label>Link to this view:<input value="<?php the_permalink(); ?>" readonly="" type="url"> Shortcut to copy the link: <kbd>ctrl</kbd>+<kbd>C</kbd> <em>or</em> <kbd>⌘</kbd><kbd>C</kbd></label></p><p><a href="mailto:?body=<?php the_permalink(); ?>">E-mail a link to this section</a><button>Close</button></p></div></div>
   </header><!-- .entry-header -->
 
   <div class="entry-content">
@@ -128,11 +127,6 @@ if ( $query->have_posts() )
       <div class="desc-inner">
         <p>
         <?php
-          /*the_content( sprintf(
-            /* translators: %s: Name of current post. *//*
-            wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'wai_components' ), array( 'span' => array( 'class' => array() ) ) ),
-            the_title( '<span class="screen-reader-text">"', '"</span>', false )
-          ) );*/
           if($comptype) {
             echo ('<span class="visuallyhidden">Component Type:</span>');
             foreach ($comptype as $type) {
@@ -193,21 +187,17 @@ if ( $query->have_posts() )
           <?php } ?>
           </li>
           <?php } ?>
-          <li><strong>Information last updated:</strong> <?php the_modified_date("Y-m-d"); ?></li>
+          <li><strong>Component submitted:</strong> <?php the_modified_date("Y-m-d"); ?></li>
         </ul>
+        <p class="support"><a href="<?php the_permalink(); ?>#report"><?php echo wai_icon( 'warning' ); ?> Report a problem with this entry</a> <?php wai_components_entry_footer(); ?></p>
       </aside>
     </div>
   </div><!-- .entry-content -->
-
-  <footer class="entry-footer">
-    <?php wai_components_entry_footer(); ?>
-  </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 
     <?php
   }
   ?>
-<?php /*
     <nav class="pagination" labelledby="bottompaginationtitle">
       <ul role="presentation">
         <li class="nav-next" role="presentation"><?php previous_posts_link( 'Previous Page' ); ?></li>
@@ -215,7 +205,6 @@ if ( $query->have_posts() )
         <li class="nav-prev" role="presentation"><?php next_posts_link( 'Next Page', $query->max_num_pages ); ?></li>
       </ul>
     </nav>
-    */?>
   </div>
   <?php
 }
